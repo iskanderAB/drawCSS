@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hart{
+    position: relative;
+    border-top: 25vmin solid brown;
+    border-left: 15vmin solid transparent;
+    border-right: 15.01vmin solid transparent; 
+}
+.hart::before{
+    content: "";
+    position: absolute;
+    width: 16vmin;
+    height: 13vmin;
+    background-color: brown;
+    border-radius: 45%;
+    bottom:20vmin;
+    right: -1vmin;
+}
+.hart::after{
+    content: "";
+    position: absolute;
+    width: 16vmin;
+    height: 13vmin;
+    background-color: brown;
+    border-radius: 45%;
+    bottom:20vmin;
+    left: -1vmin;
+}

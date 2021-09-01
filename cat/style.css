@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container { 
+    width: 100vmin;
+    height: 80vmin;
+    position: absolute;
+    top:0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgb(161, 189, 119);
+}
+.cat{
+    position: relative;
+    top:8vmin;
+    left : 20vmin;
+    background-color: blueviolet;
+}
+.face{
+    position: absolute;
+    width: 25vmin;
+    height: 15vmin;
+    background-color: rgb(58, 51, 51) ;
+    border-radius: 5vmin;
+    border: 2px solid black;
+
+}
+/* khcham */
+.faceDetails{
+    position: absolute;
+    width: 2.5vmin;
+    border-top: 2vmin solid rgb(223, 134, 134);
+    border-left: 2vmin solid transparent;
+    border-right: 2vmin solid transparent;
+    top: 60%;
+    left: 0;
+    right: 0; 
+    margin: auto;
+    border-radius: 3px;
+}
+.faceDetails::after{
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    width: 4vmin;
+    height: 4vmin;
+    background-color: black;
+    border-radius: 50%;
+    top: -8vmin;
+    left : 3vmin;
+    border: .5vmin solid goldenrod;
+}
+.faceDetails::before{
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    width: 4vmin;
+    height: 4vmin;
+    background-color: black;
+    border-radius: 50%;
+    top: -8vmin;
+    right : 3vmin;
+    border: .5vmin solid goldenrod;
+}
+.ear-l{
+    position: absolute;
+    border-bottom: 7vmin solid rgb(58, 51, 51) ;
+    border-right: 7vmin solid transparent;
+    top:-7vmin;
+    left: 4vmin;
+    border-left: 2px solid black;
+}
+.ear-l::before{
+    content: "";
+    position: absolute;
+    border-bottom: 7vmin solid rgb(200, 132, 132);
+    border-right: 3vmin solid transparent;
+    top: 0;
+}
+.ear-l::after{
+    content: "";
+    position: absolute;
+    width: 10.2vmin;
+    height: 2px;
+    top:3.2vmin;
+    left :-1.6vmin;
+    background-color: black;
+    transform: rotate(45deg);
+}
+.ear-r{
+    position: absolute;
+    border-bottom: 7vmin solid rgb(58, 51, 51) ;
+    border-left: 7vmin solid transparent;
+    top:-7vmin;
+    right: 4vmin;
+    border-right: 2px solid black;
+}
+.ear-r::after{
+    content: "";
+    position: absolute;
+    border-bottom: 7vmin solid rgb(200, 132, 132);
+    border-left: 3vmin solid transparent;
+    top: 0;
+    right: 0;
+}
+.ear-r::before{
+    content: "";
+    position: absolute;
+    width: 10.2vmin;
+    height: 2px;
+    top:3.2vmin;
+    right :-1.6vmin;
+    background-color: black;
+    transform: rotate(-45deg);
+}
+.body{
+    position: absolute;
+    width: 30vmin;
+    height: 24vmin;
+    top : 15vmin;
+    left : 6vmin;
+    background-color:rgb(58, 51, 51) ;
+    border: 2px solid black;
+    border-radius: 0 15vmin 0 0;
+}
+/* dhil */
+.body::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(58, 51, 51) ;
+    width: 60%;
+    height: 2vmin;
+    bottom: -0.2vmin;
+    left: 100%;
+    border-right: 2px solid black;
+    border-top:2px solid black ;
+    border-bottom: 2px solid black;
+    border-radius: 0 5vmin 5vmin 0  ;
+}
+.leg{
+    content: "";
+    position: absolute;
+    background-color: rgb(58, 51, 51) ;
+    /* background-color: black; */
+    width: 5vmin;
+    height: 4vmin;
+    bottom: -4.2vmin;
+    left: 0vmin;
+    box-shadow: 13vmin 0 rgb(58, 51, 51) ,
+                13vmin 0 0 2px black,
+                0 0 0 2px black;
+    border-radius: 0 0 5vmin 5vmin;
+}
+.mouth {
+    position: absolute;
+    width: 2.5vmin;
+    height: 2.5vmin;
+    margin: auto;
+    top: 76%;
+    left: 0;
+    right: 0;
+    border-top: .3vmin solid goldenrod ;
+    border-left: .3vmin solid goldenrod ;
+    border-radius: 30%;
+    transform: rotate(45deg);
+}
+.kilada{
+    position: absolute;
+    width: 4vmin;
+    height: 4vmin;
+    background-color: cyan;
+    left: 4vmin;
+    top :1vmin;
+    border: .5vmin solid goldenrod;
+    text-align: center;
+    transform: rotate(45deg);
+    animation: blink .3s infinite;
+}
+.kilada::after{
+    content: "I S K";
+    position: absolute;
+    font-size: 1vmin;
+    font-weight: bold;
+    left: 20%;
+    top: 40%;
+    transform: rotate(-45deg);
+}
+.kilada::before{
+    content: "";
+    position: absolute;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: black;
+    left :-2vmin;
+    bottom: 2.8vmin;
+    border-radius: 50%;
+    border: 1px dashed black;
+    background-color: rgb(170, 170, 0);
+}
+@keyframes blink {
+    0%{
+        background-color: cyan;
+    }
+    25%{ 
+        background-color: brown;
+    }
+    50%{ 
+        background-color:rgb(223, 134, 134);
+    }
+    75%{ 
+        background-color:hotpink;
+    }
+    100%{
+        background-color: yellow ;
+    }
+}
